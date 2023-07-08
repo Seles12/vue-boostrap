@@ -1,5 +1,5 @@
 <template>
-  <div class="RioJAN">
+  <div class="RioJAN" v-if="show">
     <b-carousel
       id="carousel-fade"
       style="text-shadow: 0px 0px 2px #000"
@@ -25,6 +25,15 @@
     </b-carousel>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    show: Boolean,
+  },
+}
+</script>
+
 <style>
 /* .RioJAN {
   display: none;

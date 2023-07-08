@@ -1,5 +1,5 @@
 <template>
-  <div class="Bahia">
+  <div class="Bahia" v-if="show">
     <b-carousel
       id="carousel-fade"
       style="text-shadow: 0px 0px 2px #000"
@@ -25,8 +25,13 @@
   </div>
 </template>
 
-<style>
-.Bahia {
-  display: none;
+<script>
+export default {
+  props: {
+    show: Boolean,
+  },
 }
+</script>
+
+<style>
 </style>
