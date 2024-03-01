@@ -1,24 +1,28 @@
 <template>
-  <div class="nav">
-    <b-nav>
+  <div class="head">
+    <b-nav class="button1">
       <b-nav-item active>
-        <b-button @click="toggleCarousel('showBahia')" variant="outline-primary">Sao Paulo</b-button>
+        <b-button @click="toggleCarousel('showBahia')" variant="outline-primary"
+          >Sao Paulo</b-button
+        >
       </b-nav-item>
-      
+
       <b-nav-item>
         <b-button @click="toggleCarousel('showSP')" variant="outline-success"
           >Rio De Janeiro</b-button
         ></b-nav-item
       >
       <b-nav-item>
-        <b-button @click="toggleCarousel('showRJ')" variant="outline-info">Bahia</b-button>
+        <b-button @click="toggleCarousel('showRJ')" variant="outline-info"
+          >Bahia</b-button
+        >
       </b-nav-item>
     </b-nav>
 
     <div>
-      <bahia :show="showBahia"/>
-      <saoPaulo :show="showSP"/>
-      <RioJAN :show="showRJ"/>
+      <bahia :show="showBahia" />
+      <saoPaulo :show="showSP" />
+      <RioJAN :show="showRJ" />
     </div>
     <!-- </component:> -->
   </div>
@@ -36,7 +40,7 @@ export default {
       showSP: true,
       showBahia: false,
       showRJ: false,
-    }
+    };
   },
   methods: {
     toggleCarousel(carouselName) {
@@ -45,16 +49,20 @@ export default {
       this.showRJ = false;
 
       this[carouselName] = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
-.nav {
-  display: flex;
-    justify-content: flex-end;
-    background: black;
-    flex-direction: column;
+.head {
+  width: auto;
+  height: auto;
+}
+.button1 {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: end;
+  background-color: black;
 }
 </style>
