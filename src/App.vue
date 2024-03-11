@@ -2,19 +2,22 @@
   <div class="head">
     <b-nav class="button1">
       <b-nav-item active>
-        <b-button @click="toggleCarousel('showBahia')" variant="outline-primary"
-          >Sao Paulo</b-button
+        <b-button
+          @click="toggleCarousel('showBahia')"
+          variant="outline-primary"
+        >
+          Bahia</b-button
         >
       </b-nav-item>
 
       <b-nav-item>
-        <b-button @click="toggleCarousel('showSP')" variant="outline-success"
-          >Rio De Janeiro</b-button
-        ></b-nav-item
+        <b-button @click="toggleCarousel('showSP')" variant="outline-success">
+          Sao Paulo
+        </b-button></b-nav-item
       >
       <b-nav-item>
         <b-button @click="toggleCarousel('showRJ')" variant="outline-info"
-          >Bahia</b-button
+          >Rio De Janeiro</b-button
         >
       </b-nav-item>
     </b-nav>
